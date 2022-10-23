@@ -1,11 +1,5 @@
-from django.db.models import Q
-from django_filters.rest_framework import DjangoFilterBackend
-from rest_framework import viewsets, response
-from rest_framework.decorators import action
-from rest_framework.generics import ListAPIView
+from rest_framework import viewsets
 from rest_framework.pagination import PageNumberPagination
-
-from ads.models import ad
 from ads.models.ad import Ad
 from ads.models.category import Category
 from ads.serializers import AdSerializer, CatSerializer

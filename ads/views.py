@@ -29,7 +29,7 @@ class AdViewSet(viewsets.ModelViewSet):
         if request.GET.get("text", None):
             self.queryset = self.queryset.filter(name__icontains=request.GET.get("text"))
 
-        # Filter by user location
+        # Фильтровать по локации юзера
         if request.GET.get("location", None):
             self.queryset = self.queryset.filter(author__locations__name__icontains=request.GET.get("location"))
 
